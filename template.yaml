@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'alexaskilluniville
+
+  Sample SAM Template for alexaskilluniville
+
+  '
+Globals:
+  Function:
+    Timeout: 3
+Outputs:
+  AlexaSkillUnivilleFunction:
+    Description: AlexaSkillUniville Lambda Function ARN
+    Value:
+      Fn::GetAtt:
+      - AlexaSkillUnivilleFunction
+      - Arn
+  AlexaSkillUnivilleFunctionIamRole:
+    Description: Implicit IAM Role created for AlexaSkillUniville function
+    Value:
+      Fn::GetAtt:
+      - AlexaSkillUnivilleFunctionRole
+      - Arn
+Resources:
+  AlexaSkillUnivilleFunction:
+    Properties:
+      CodeUri: s3://s3alexaskilluniville/108da8a2646905a5dbccf63b0b11c2e8
+      Handler: app.lambdaHandler
+      Runtime: nodejs8.10
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31
