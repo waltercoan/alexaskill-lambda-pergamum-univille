@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.1.4",
+    "mocha": "^10.2.0",
     "ask-sdk": "^2.0.0",
     "request": "^2.88.0",
     "node-html-parser": "^1.1.15"
